@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"jcondeco-ciphers.com/affine"
+	"jcondeco-ciphers.com/elgamal"
 	"jcondeco-ciphers.com/xor"
 )
 
@@ -22,4 +23,7 @@ func main() {
 	xorCipher := xor.XorString(original, byte(0x7F))
 	fmt.Println("After encryption: " + xorCipher)
 	fmt.Println("Back to normal: " + xor.XorString(xorCipher, byte(0x7F)))
+
+	//fmt.Println(elgamal.Generators(20, 23))
+	fmt.Println(elgamal.PrimitiveRoots(11))
 }
